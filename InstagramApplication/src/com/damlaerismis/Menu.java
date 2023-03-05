@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import javax.imageio.spi.RegisterableService;
 
-public class Menu extends User{
+public class Menu extends UserManager{
 
 	public void showUserMenu() {
 		System.out.println("****************");
@@ -15,11 +15,12 @@ public class Menu extends User{
         System.out.println("1. Giriş yap!");
         System.out.println("2. Şifremi unuttum!");
         System.out.println("3. Kullanıcı adımı güncelle.");
-        System.out.println("4. Çıkış yap!");
+        System.out.println("4. Post Ekle!");
+        System.out.println("5. ÇIKIŞ YAP!");
     }
-	
+	UserManager user = new UserManager();
+
 	public void chooseAction() {
-		User user = new User();
 		showUserMenu();
 		boolean check = true;
 		while(check) {
@@ -41,9 +42,13 @@ public class Menu extends User{
 				user.updateUsername();
 				break;
 			case 4:
+				user.addPost(getUsername());
+				break;
+			case 5:
 				check = false;
 				System.err.println("ÇIKIŞ");
 				break;
+
 			}
 		}
 	}
