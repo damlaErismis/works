@@ -2,7 +2,7 @@ package com.damlaerismis;
 
 import java.util.ArrayList;
 
-public class Post extends UserManager{
+public class Post {
 
 	private String caption;
 	private String imageUrl;

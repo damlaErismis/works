@@ -167,4 +167,17 @@ public class UserManager {
 		this.posts = postsByUser;
 	}
 
+	//constructor method:
+	public UserManager(String email, String password, String confirmPassword, String securityQuestion,
+			String securityAnswer, String username, HashMap<String, ArrayList<Post>> posts) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.confirmPassword = confirmPassword;
+		this.securityQuestion = securityQuestion;
+		this.securityAnswer = securityAnswer;
+		this.username = username;
+		this.posts = posts;
+	}
+
 }
